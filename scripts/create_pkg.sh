@@ -7,6 +7,7 @@ dir_name=lambda_dist_pkg/
 mkdir $dir_name
 
 # Create and activate virtual environment...
+pip install virtualenv
 virtualenv -p $runtime env_$function_name
 source $path_cwd/env_$function_name/bin/activate
 

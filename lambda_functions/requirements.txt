@@ -1,0 +1,3 @@
+json-checker==2.0.0
+requests
+pyjwt[crypto]

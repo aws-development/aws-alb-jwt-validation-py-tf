@@ -1,18 +1,15 @@
-resource "aws_s3_bucket" "bucket_read_videos" {
-  bucket = var.bucket_for_videos
-}
-
+/*
 resource "aws_s3_bucket_notification" "bucket_notification" {
   bucket = aws_s3_bucket.bucket_read_videos.id
 
   lambda_function {
     lambda_function_arn = aws_lambda_function.aws_lambda_test.arn
-    events = ["s3:ObjectCreated:*"]
-    filter_suffix = ".mp4"
+    events              = ["s3:ObjectCreated:*"]
+    filter_suffix       = ".mp4"
   }
 }
-
-
+*/
+/*
 resource "aws_s3_bucket" "lambda_bucket" {
   bucket = random_pet.lambda_bucket_name.id
 
@@ -43,3 +40,4 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "s3_sse" {
     }
   }
 }
+*/

@@ -1,26 +1,26 @@
 
-variable "AWS_ACCESS_KEY"{}
-variable "AWS_SECRET_KEY"{}
+variable "AWS_ACCESS_KEY" {}
+variable "AWS_SECRET_KEY" {}
 
 
 variable "s3_acl" {
-  type = string
+  type    = string
   default = "private"
 }
 
 
 variable "env" {
-  type = string
+  type    = string
   default = "dev"
 }
 
 variable "lambda_bucket_name_prefix" {
-  type = string
+  type    = string
   default = "lambda"
 }
 
 variable "s3_bucket_name" {
-  type = string
+  type    = string
   default = "lambda-functions-bucket"
 }
 
@@ -30,7 +30,7 @@ variable "path_source_code" {
 }
 
 variable "function_name" {
-  default = "PrintHttpHeaders"
+  default = "PrintHttpHeaders-tf"
 }
 
 variable "runtime" {
@@ -39,20 +39,20 @@ variable "runtime" {
 
 variable "output_path" {
   description = "Path to function's deployment package into local filesystem. eg: /path/lambda_function.zip"
-  default = "lambda_functions.zip"
+  default     = "lambda_functions.zip"
 }
 
 variable "distribution_pkg_folder" {
   description = "Folder name to create distribution files..."
-  default = "lambda_dist_pkg"
+  default     = "lambda_dist_pkg"
 }
 
 variable "bucket_for_videos" {
   description = "Bucket name for put videos to process..."
-  default = "aws-lambda-function-read-videos"
+  default     = "aws-lambda-function-read-videos"
 }
 
 variable "bucket_for_images" {
   description = "Bucket name for save images..."
-  default = "aws-lambda-function-write-images"
+  default     = "aws-lambda-function-write-images"
 }
